@@ -1,0 +1,23 @@
+{
+  "generatedBy": "maxpolio site",
+  "files": [
+    "assets/style.css",
+    "assets/site.js",
+    "assets/fonts/Galmuri11.woff2",
+    "assets/fonts/Galmuri11-Bold.woff2",
+    "assets/fonts/Galmuri-OFL.md",
+    ".nojekyll",
+    "index.html",
+    "projects/index.html",
+    "projects/playnote/index.html",
+    "projects/maxpolio/index.html",
+    "projects/agents/index.html",
+    "projects/news/index.html",
+    "posts/index.html",
+    "categories/AI-소식/index.html",
+    "categories/Claude-Code-소식/index.html",
+    "posts/2026-11-25-AI-소식/index.html",
+    "posts/AI-흐름-한눈에/index.html",
+    "posts/2026-11-25-Claude-Code-소식/index.html"
+  ]
+}

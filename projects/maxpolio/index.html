@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>maxpolio · 연초희 기술 블로그</title>
+<meta name="description" content="Claude Code와 나눈 개발 대화를 자동으로 노트로 정리하고, 그 노트로 이 블로그를 만드는 도구입니다.">
+
+<meta name="theme-color" content="#2b2a3a">
+<meta name="office-status" content="https://raw.githubusercontent.com/yeonchohee/blog/status/status.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="tile-off" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#e9dfc7"/><rect width="4" height="4" fill="#e2d6ba"/><rect x="4" y="4" width="4" height="4" fill="#e2d6ba"/></pattern>
+<pattern id="tile-lit" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#ffe9a3"/><rect width="4" height="4" fill="#ffdf80"/><rect x="4" y="4" width="4" height="4" fill="#ffdf80"/></pattern>
+</defs></svg>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../../">연초희</a>
+<nav class="site-nav" aria-label="메뉴"><a href="../../projects/" aria-current="page">프로젝트</a><a href="../../posts/">글</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../">◀ 프로젝트</a><span class="live now-live" hidden>지금 작업 중</span></p>
+<div class="panel big-room" data-room="maxpolio"><svg class="px mini-room" viewBox="0 0 104 72" role="img" aria-label="maxpolio 방"><rect width="104" height="72" fill="#2b2a3a"/><rect class="floor" x="3" y="3" width="98" height="66"/><rect x="3" y="3" width="98" height="14" fill="#cfc3a6"/><rect x="3" y="3" width="5" height="14" fill="#339af0"/><rect class="lamp" x="88" y="7" width="6" height="6"/><rect x="14" y="52" width="18" height="6" fill="#8a6a4a"/><rect x="18" y="46" width="8" height="6" fill="#4a4760"/><rect x="44" y="52" width="18" height="6" fill="#8a6a4a"/><rect x="48" y="46" width="8" height="6" fill="#4a4760"/><rect x="74" y="52" width="18" height="6" fill="#8a6a4a"/><rect x="78" y="46" width="8" height="6" fill="#4a4760"/><g transform="translate(52 48)"><rect x="-3" y="-14" width="2" height="2" fill="#a7a2bd"/><rect x="-1" y="-14" width="2" height="2" fill="#a7a2bd"/><rect x="1" y="-14" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="-3" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="-1" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="1" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="3" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-10" width="2" height="2" fill="#f6d5b5"/><rect x="-3" y="-10" width="2" height="2" fill="#2b2a3a"/><rect x="-1" y="-10" width="2" height="2" fill="#f6d5b5"/><rect x="1" y="-10" width="2" height="2" fill="#2b2a3a"/><rect x="3" y="-10" width="2" height="2" fill="#f6d5b5"/><rect x="-5" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="-3" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="-1" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="1" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="3" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="-7" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="-3" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="-1" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="1" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="3" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="5" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="-3" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="-1" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="1" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="3" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-2" width="2" height="2" fill="#2b2a3a"/><rect x="-3" y="-2" width="2" height="2" fill="#2b2a3a"/><rect x="1" y="-2" width="2" height="2" fill="#2b2a3a"/><rect x="3" y="-2" width="2" height="2" fill="#2b2a3a"/></g></svg></div>
+<h1 class="h1">maxpolio</h1>
+<p class="lead">Claude Code와 나눈 개발 대화를 자동으로 노트로 정리하고, 그 노트로 이 블로그를 만드는 도구입니다. <span class="stack">Node.js, Claude Code hook, cron, GitHub Pages</span></p>
+
+<h2 class="sec">문제 해결 기록 0개</h2>
+<p class="empty panel">아직 공개한 기록이 없어요. 곧 올라올 거예요.</p>
+<h2 class="sec">작업 기록 0개</h2>
+<p class="empty panel">아직 공개한 기록이 없어요. 곧 올라올 거예요.</p>
+</main>
+<footer class="site-footer"><div class="wrap">Claude Code 작업 기록을 maxpolio로 정리해 만든 블로그 · 픽셀 글꼴 <a href="https://galmuri.quiple.dev/">Galmuri</a></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

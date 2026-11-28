@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>연초희 기술 블로그</title>
+<meta name="description" content="불 켜진 방은 지금 일하는 중..!">
+
+<meta name="theme-color" content="#2b2a3a">
+<meta name="office-status" content="https://raw.githubusercontent.com/yeonchohee/blog/status/status.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="./assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="tile-off" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#e9dfc7"/><rect width="4" height="4" fill="#e2d6ba"/><rect x="4" y="4" width="4" height="4" fill="#e2d6ba"/></pattern>
+<pattern id="tile-lit" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#ffe9a3"/><rect width="4" height="4" fill="#ffdf80"/><rect x="4" y="4" width="4" height="4" fill="#ffdf80"/></pattern>
+</defs></svg>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="./">연초희</a>
+<nav class="site-nav" aria-label="메뉴"><a href="./projects/">프로젝트</a><a href="./posts/">글</a></nav>
+</div></header>
+<main class="wrap">
+<section class="office-box">
+<div class="office-status"><span id="office-head"><b>실시간 연결 준비 중</b></span><span class="live" id="office-clock"></span></div>
+<svg class="px office" id="office" viewBox="0 0 380 428" role="img" aria-label="에이전트들이 일하는 픽셀 사무실. 불 켜진 방이 지금 진행 중인 프로젝트입니다"></svg>
+<div class="work-row" id="work-row" hidden><small id="work-hint"></small><span><button type="button" class="work-btn" id="work-btn">일해! 📣</button></span></div>
+<div class="panel office-say" id="office-say" aria-live="polite">에이전트들이 휴게실에서 쉬고 있어요.</div>
+<script type="application/json" id="office-data">{"rooms":[{"id":"playnote","name":"Playnote","sub":"악보 인식·재생 앱","color":"#e64980","masked":false,"href":"projects/playnote/","x":10,"y":10,"w":176,"h":112},{"id":"maxpolio","name":"maxpolio","sub":"개발 기록 자동화 · 이 블로그","color":"#339af0","masked":false,"href":"projects/maxpolio/","x":194,"y":10,"w":176,"h":112},{"id":"agents","name":"에이전트 팀","sub":"AI 에이전트 운영","color":"#12b886","masked":false,"href":"projects/agents/","x":10,"y":130,"w":176,"h":90},{"id":"news","name":"뉴스룸","sub":"예약 실행","color":"#fd7e14","masked":false,"href":"projects/news/","x":194,"y":130,"w":176,"h":90},{"id":"work","name":"비공개 작업실","sub":"작업 중인지만 보여요","color":"#868e96","masked":true,"x":10,"y":228,"w":360,"h":90}],"lounge":{"id":"lounge","name":"휴게실","sub":"쉬는 중","color":"#adb5bd","x":10,"y":326,"w":360,"h":92},"height":428,"team":[{"id":"planner","color":"#4c6ef5"},{"id":"architect","color":"#4c6ef5"},{"id":"critic","color":"#4c6ef5"},{"id":"ui-designer","color":"#4c6ef5"},{"id":"reviewer","color":"#2f9e44"},{"id":"tester","color":"#2f9e44"},{"id":"debugger","color":"#2f9e44"},{"id":"metrics-keeper","color":"#2f9e44"},{"id":"ai-news","color":"#fd7e14"},{"id":"cc-news","color":"#fd7e14"},{"id":"cc-coach","color":"#fd7e14"},{"id":"trend-researcher","color":"#fd7e14"},{"id":"maxpolio","color":"#868e96"},{"id":"claude","color":"#d97757","label":"Claude"},{"id":"helper","color":"#74c0fc","label":"조수"}],"statusUrl":"https://raw.githubusercontent.com/yeonchohee/blog/status/status.json"}</script>
+</section>
+<section class="intro">
+<h1>작업실</h1>
+<p>불 켜진 방은 지금 일하는 중..!</p>
+<div class="doors"><a class="pbtn y" href="projects/">프로젝트</a><a class="pbtn" href="posts/">글</a></div>
+</section>
+<h2 class="sec">최근 글</h2>
+<ul class="post-cards">
+<li class="panel" data-type="ai-trend">
+<span class="tag"><i style="background:#fd7e14"></i>AI 트렌드 · 뉴스룸</span>
+<a class="post-link" href="./posts/2026-11-25-AI-%EC%86%8C%EC%8B%9D/">AI 소식 2026-11-25</a>
+<p class="post-excerpt">에이전트 성능은 &quot;어떤 도구(하네스)에 얹느냐&quot;보다 &quot;어떤 모델을 쓰느냐&quot;가 훨씬 크게 좌우한다는 대규모 벤치마크(ShellBench)가 나왔다.</p>
+<span class="meta"><time datetime="2026-11-25">2026.11.25</time> · 7분</span>
+</li>
+<li class="panel" data-type="ai-trend">
+<span class="tag"><i style="background:#fd7e14"></i>AI 트렌드 · 뉴스룸</span>
+<a class="post-link" href="./posts/AI-%ED%9D%90%EB%A6%84-%ED%95%9C%EB%88%88%EC%97%90/">AI 흐름 한눈에</a>
+<p class="post-excerpt">지금 AI 업계의 큰 흐름, 회사별 최신 모델, 최근 2주 타임라인을 매일 갱신하는 정리본입니다.</p>
+<span class="meta"><time datetime="2026-11-25">2026.11.25</time> · 2분</span>
+</li>
+<li class="panel" data-type="ai-trend">
+<span class="tag"><i style="background:#fd7e14"></i>AI 트렌드 · 뉴스룸</span>
+<a class="post-link" href="./posts/2026-11-25-Claude-Code-%EC%86%8C%EC%8B%9D/">Claude Code 소식 2026-11-25</a>
+<p class="post-excerpt">Claude Code 2.1.327부터 2.1.332까지의 변경 중 꼭 알아야 할 것과 써 볼 만한 새 기능을 정리했습니다.</p>
+<span class="meta"><time datetime="2026-11-25">2026.11.25</time> · 7분</span>
+</li>
+</ul>
+<p class="more"><a class="pbtn" href="posts/">글 전체 보기</a></p>
+</main>
+<footer class="site-footer"><div class="wrap">Claude Code 작업 기록을 maxpolio로 정리해 만든 블로그 · 픽셀 글꼴 <a href="https://galmuri.quiple.dev/">Galmuri</a></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="./assets/site.js"></script>
+</body>
+</html>

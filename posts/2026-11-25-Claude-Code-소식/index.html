@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code 소식 2026-11-25 · 연초희 기술 블로그</title>
+<meta name="description" content="Claude Code 2.1.327부터 2.1.332까지의 변경 중 꼭 알아야 할 것과 써 볼 만한 새 기능을 정리했습니다.">
+
+<meta name="theme-color" content="#2b2a3a">
+<meta name="office-status" content="https://raw.githubusercontent.com/yeonchohee/blog/status/status.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="tile-off" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#e9dfc7"/><rect width="4" height="4" fill="#e2d6ba"/><rect x="4" y="4" width="4" height="4" fill="#e2d6ba"/></pattern>
+<pattern id="tile-lit" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#ffe9a3"/><rect width="4" height="4" fill="#ffdf80"/><rect x="4" y="4" width="4" height="4" fill="#ffdf80"/></pattern>
+</defs></svg>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="../../">연초희</a>
+<nav class="site-nav" aria-label="메뉴"><a href="../../projects/">프로젝트</a><a href="../../posts/" aria-current="page">글</a></nav>
+</div></header>
+<main class="wrap">
+<div class="read-progress" aria-hidden="true"><i></i></div>
+<div class="post-layout">
+<article>
+<header class="post-header">
+<span class="tag"><i style="background:#fd7e14"></i>AI 트렌드</span>
+<h1 class="h1">Claude Code 소식 2026-11-25</h1>
+<p class="meta"><time datetime="2026-11-25">2026. 11. 25.</time> · 7분 · <a href="../../categories/Claude-Code-%EC%86%8C%EC%8B%9D/">Claude Code 소식</a></p>
+<p class="post-summary">Claude Code 2.1.327부터 2.1.332까지의 변경 중 꼭 알아야 할 것과 써 볼 만한 새 기능을 정리했습니다.</p>
+<ul class="tags"><li>ClaudeCode</li><li>자동정리</li></ul>
+</header>
+<a class="from panel" href="../../projects/news/"><svg class="px mini-room" viewBox="0 0 104 72" aria-hidden="true"><rect width="104" height="72" fill="#2b2a3a"/><rect class="floor" x="3" y="3" width="98" height="66"/><rect x="3" y="3" width="98" height="14" fill="#cfc3a6"/><rect x="3" y="3" width="5" height="14" fill="#fd7e14"/><rect class="lamp" x="88" y="7" width="6" height="6"/><rect x="14" y="52" width="18" height="6" fill="#8a6a4a"/><rect x="18" y="46" width="8" height="6" fill="#4a4760"/><rect x="44" y="52" width="18" height="6" fill="#8a6a4a"/><rect x="48" y="46" width="8" height="6" fill="#4a4760"/><rect x="74" y="52" width="18" height="6" fill="#8a6a4a"/><rect x="78" y="46" width="8" height="6" fill="#4a4760"/><g transform="translate(52 48)"><rect x="-3" y="-14" width="2" height="2" fill="#a7a2bd"/><rect x="-1" y="-14" width="2" height="2" fill="#a7a2bd"/><rect x="1" y="-14" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="-3" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="-1" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="1" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="3" y="-12" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-10" width="2" height="2" fill="#f6d5b5"/><rect x="-3" y="-10" width="2" height="2" fill="#2b2a3a"/><rect x="-1" y="-10" width="2" height="2" fill="#f6d5b5"/><rect x="1" y="-10" width="2" height="2" fill="#2b2a3a"/><rect x="3" y="-10" width="2" height="2" fill="#f6d5b5"/><rect x="-5" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="-3" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="-1" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="1" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="3" y="-8" width="2" height="2" fill="#f6d5b5"/><rect x="-7" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="-3" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="-1" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="1" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="3" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="5" y="-6" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="-3" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="-1" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="1" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="3" y="-4" width="2" height="2" fill="#a7a2bd"/><rect x="-5" y="-2" width="2" height="2" fill="#2b2a3a"/><rect x="-3" y="-2" width="2" height="2" fill="#2b2a3a"/><rect x="1" y="-2" width="2" height="2" fill="#2b2a3a"/><rect x="3" y="-2" width="2" height="2" fill="#2b2a3a"/></g></svg><span><b>뉴스룸 방에서 나온 기록</b>3개 중 1번째 · 방으로 가기</span></a>
+<details class="toc toc-inline panel"><summary class="toc-title">목차</summary><ul><li class="toc-h2"><a href="#꼭-알아야-할-것">꼭 알아야 할 것</a></li><li class="toc-h2"><a href="#써-볼-만한-새-기능-최대-5개">써 볼 만한 새 기능 (최대 5개)</a></li><li class="toc-h2"><a href="#그-밖의-변경-한-줄씩">그 밖의 변경 (한 줄씩)</a></li><li class="toc-h2"><a href="#확인하지-못한-출처">확인하지 못한 출처</a></li></ul></details>
+<div class="post-body panel">
+<p>설치된 버전: 2.1.332 / 최신 버전: 2.1.332 (2026-11-25 공식 changelog 기준)
+확인 범위: 기존 소식지와 state.json이 없어 최근 2주(2026-11-11 ~ 11-25)를 기준으로 삼았어요. 날짜가 확인된 버전은 2.1.327(11-17)부터 2.1.332(11-25)까지예요.
+추가 소식 없음: 같은 날 공식 changelog를 다시 열어 봤고 2.1.332보다 새 버전은 없었어요. 아래 내용은 유지하되, 다시 읽어 확인한 부분은 바로잡았어요.</p>
+<h2 id="꼭-알아야-할-것">꼭 알아야 할 것</h2>
+<ul>
+<li>지금 설정(SessionEnd/Notification/SessionStart hook, frontend-design 플러그인, 스킬 /commit-push-pr, 에이전트 11명)을 직접 깨뜨리는 변경은 확인되지 않았어요. 아래는 해당될 수 있어서 알려요.</li>
+<li><strong><code>/code-review</code>가 좁아졌어요 (2.1.328, 11-19)</strong>: 대부분의 모델에서 버그와 CLAUDE.md 위반만 알려줘요. 정리/단순화는 <code>/simplify</code>를 쓰세요. 대상 없이 쓰면 기본 브랜치와 비교해 브랜치 전체를 봐요(2.1.329). reviewer 에이전트와 역할이 겹치는지 보세요. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+<li><strong>예약 작업 다시 걸기 (2.1.329, 11-19)</strong>: 이전 버전에서 저장한 예약 작업은 새 로그인 세션에서 다시 예약해야 해요. playnote에 <code>scheduled_tasks.lock</code>이 있어 해당될 수 있어요. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+<li><strong><code>computer-use</code>라는 이름의 스킬은 예약됨 (2.1.332, 11-25)</strong>: Mac에서 computer use를 켠 경우 같은 이름의 내 스킬은 로드되지 않아요. 지금 쓰는 스킬 이름과는 충돌 없어요(리눅스 사용 중). <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+<li><strong><code>rm</code> 승인이 더 엄격해짐 (2.1.330, 11-20)</strong>: 루트나 홈 등을 겨냥한 <code>rm</code> 명령이 더 많이 승인 대상이 돼요. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+<li><strong><code>/export</code>가 덮어쓰기 전에 물어봐요 (2.1.327, 11-17)</strong>. 이 항목은 이번 재확인 때 페이지가 잘려 다시 읽지 못했어요(처음 기록 그대로).</li>
+<li><strong>11월 30일 예정</strong>: 관리형 <code>extraKnownMarketplaces</code>의 플러그인 마켓이 자동 업데이트가 기본이 돼요(끄려면 <code>&quot;autoUpdate&quot;: false</code>). 관리형 설정을 쓸 때만 해당해서 나는 해당 안 될 가능성이 큼. 또 검색 결과에 Opus 4.8 fast mode가 11월 30일에 없어진다는 글이 있는데, 제3자 글이라 공식 확인은 못 했어요. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+</ul>
+<h2 id="써-볼-만한-새-기능-최대-5개">써 볼 만한 새 기능 (최대 5개)</h2>
+<ul>
+<li><strong><code>/status</code>로 설정 점검 (2.1.327)</strong>: 고장 난 에이전트, 스킬, 명령, 출력 스타일 파일과 무시된 설정을 보여줘요(집 점검표 같은 것). 에이전트 11명과 스킬을 직접 만들어 쓰니 오타나 형식 오류를 찾기 좋아요. 세션에서 <code>/status</code> 입력. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+<li><strong><code>/tasks</code>에 예약 작업, <code>/loop</code>, fork 표시 (2.1.329)</strong>: 백그라운드로 돌아가는 일을 한 곳에서 보고 <code>x</code>로 멈춰요. 예약 작업과 <code>/loop</code> 최대 기간도 7일에서 30일로 늘었어요(2.1.330). 써 보기: <code>/tasks</code>. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+<li><strong><code>claude doctor</code>의 API 연결 점검 (2.1.331)</strong>: 연결이 안 될 때 원인을 먼저 보는 용도예요. 써 보기: 터미널에서 <code>claude doctor</code>. (이 항목은 처음 기록 그대로, 재확인 못 함) <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+<li><strong><code>claude mcp add-json &lt;name&gt; -</code> (2.1.327)</strong>: MCP 서버 설정 JSON을 표준입력으로 넘겨서 토큰이 명령 기록에 남지 않아요. 세션 안에서는 안 돼요. 써 보기: 나중에 MCP를 연결할 때 터미널에서. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+<li><strong>MCP 서버의 스킬 (베타, 2.1.332)</strong>: MCP 서버가 <code>server:skill</code> 형태로 스킬을 제공해요(<code>/</code> 메뉴에 표시). 써 보기: 해당 MCP를 연결했을 때만 의미 있어요. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">출처</a></li>
+</ul>
+<h2 id="그-밖의-변경-한-줄씩">그 밖의 변경 (한 줄씩)</h2>
+<ul>
+<li>2.1.332 (11-25): <code>PreSkillShellCommand</code> hook 추가(스킬/명령의 인라인 셸 실행을 막을 수 있음), <code>--model default</code>는 기본 모델을 못 쓰면 이전 모델로 대체, Foundry 기본 모델은 Sonnet 5.5(<code>claude-sonnet-5-5</code>), Bedrock의 Sonnet은 4.5 유지, 예약 안내 문구가 &quot;cloud scheduled task&quot;로 바뀜(<code>/routines</code>는 그대로), OTel 기본 <code>service.name</code> 변경(데스크톱), 받아쓰기 시간 제한 늘어남, <code>claude auth login</code>은 저장 실패 시 종료 코드 1.</li>
+<li>2.1.331 (11-23): Windows 레지스트리 정책(HKLM)이 <code>managed-settings.json</code>보다 우선, <code>PermissionDenied</code> hook의 <code>retry: true</code>는 사용자가 그 호출을 원했을 때만 재시도하라고 알림, 플러그인 manifest에 <code>optionalDependencies</code>, <code>CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION</code>, 여러 클라우드에서 Code Mode 지원.</li>
+<li>2.1.330 (11-20): 예약 작업과 <code>/loop</code> 최대 30일, 차트용 &quot;easel&quot; 내장 mod, <code>deniedMcpServers</code> 이름 항목은 지정한 claude.ai 커넥터만 숨김, max_tokens 자동 재시도 제거를 되돌림.</li>
+<li>2.1.329 (11-19): Code Mode에서 스크립트 출력에 UserPromptSubmit hook이 더는 실행되지 않음(가리려면 PostToolUse의 <code>updatedToolOutput</code>), <code>/code-review</code> 대상 없으면 브랜치 전체.</li>
+<li>2.1.328 (11-19): <code>/bug</code>는 보내기 전에 Yes/No 확인, <code>/list-agents</code>는 나에게만 보임, Bedrock 등에서 Opus 4.6/Sonnet 4.6 auto mode, 프롬프트 hook에 모델 별칭 사용 가능, <code>mcp_tool</code> hook의 <code>onFailure: block</code>(이 둘은 처음 기록 그대로).</li>
+<li>2.1.327 (11-17): <code>/tui classic</code> 이름 추가(<code>/tui default</code>도 계속 됨, 내 설정 <code>&quot;tui&quot;: &quot;fullscreen&quot;</code>은 그대로), <code>ExitWorktree</code>가 저장 안 된 작업이 있을 수 있는 워크트리를 지우기 전에 물어봄, <code>/install-github-app</code>은 저장소를 바꾸기 전에 확인(처음 기록 그대로).</li>
+<li>2.1.326 이하: 2.1.326(Code Mode와 agent teams 지원, 시작 시 잘못된 권한 항목 경고), 2.1.325(zstd 보안 수정), 2.1.323(Code Mode 실험적 도입)이 확인됐지만 날짜는 확인 못 함.</li>
+<li>Anthropic 발표 (2026-11-09): &quot;Claude Fable 5.2&quot;와 &quot;Claude Mythos 5.2&quot; 모델 발표. Claude Code에서의 사용 가능 여부와 기본 모델은 확인 못 함. <a href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer">출처</a></li>
+<li>11-10, 11-18, 11-20의 IPO 관련 발표는 Claude Code와 무관해서 생략해요.</li>
+</ul>
+<h2 id="확인하지-못한-출처">확인하지 못한 출처</h2>
+<ul>
+<li>changelog 전체: GitHub 원문은 약 142만 자라 앞부분(2.1.332 ~ 2.1.323)만 읽었어요. 그 이전 구간과 2.1.320 ~ 2.1.326의 날짜는 확인 못 함.</li>
+<li>공식 문서 &quot;What&#39;s new&quot; 주간 요약은 9월(37주차)까지만 있어서 11월 내용은 없었어요.</li>
+<li>claude.com/blog: 열어 보지 않음(확인 못 함).</li>
+<li>제3자 글(havoptic, claude-world 등): 버전과 날짜가 서로 맞지 않아 사용하지 않았어요.</li>
+<li>이전 소식지: 없음(폴더와 state.json이 없었어요).</li>
+</ul>
+
+</div>
+<nav class="series panel" aria-label="뉴스룸 작업 기록"><b>뉴스룸 작업 기록</b><ol><li aria-current="true">Claude Code 소식 2026-11-25</li><li><a href="../../posts/AI-%ED%9D%90%EB%A6%84-%ED%95%9C%EB%88%88%EC%97%90/">AI 흐름 한눈에</a></li><li><a href="../../posts/2026-11-25-AI-%EC%86%8C%EC%8B%9D/">AI 소식 2026-11-25</a></li></ol></nav>
+<nav class="pager" aria-label="이전 글과 다음 글"><span></span><a class="panel pager-next" href="../../posts/AI-%ED%9D%90%EB%A6%84-%ED%95%9C%EB%88%88%EC%97%90/"><span>다음 글</span>AI 흐름 한눈에</a></nav>
+</article>
+<aside class="toc toc-side"><p class="toc-title">목차</p><ul><li class="toc-h2"><a href="#꼭-알아야-할-것">꼭 알아야 할 것</a></li><li class="toc-h2"><a href="#써-볼-만한-새-기능-최대-5개">써 볼 만한 새 기능 (최대 5개)</a></li><li class="toc-h2"><a href="#그-밖의-변경-한-줄씩">그 밖의 변경 (한 줄씩)</a></li><li class="toc-h2"><a href="#확인하지-못한-출처">확인하지 못한 출처</a></li></ul></aside>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap">Claude Code 작업 기록을 maxpolio로 정리해 만든 블로그 · 픽셀 글꼴 <a href="https://galmuri.quiple.dev/">Galmuri</a></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
